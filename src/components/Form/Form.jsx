@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import * as S from "./styles";
-import { MyContext } from "../../../context/CarContext";
-import { coinToNumber, numberToCoin } from "../../../utils/formatNumber";
+import { MyContext } from "../../context/CarContext";
+import { numberToCoin, coinToNumber } from "../../utils/formatNumber";
 
 const Form = () => {
   const [year, setYear] = useState("");
