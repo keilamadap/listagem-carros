@@ -1,26 +1,45 @@
 import Carros from "../Carros/Carros";
-import { carsByBrand } from "../../data/cars";
 import * as S from "./styles";
-import { useNavContext } from "../../context/NavContext";
+import { useContext, useState } from "react";
+import { MyContext } from "../../context/CarContext";
 
 function ListagemCarros() {
-  const { modeloSelecionado } = useNavContext();
+  const [selectedModel, setSelectedModel] = useState(null);
+  const { cars } = useContext(MyContext);
 
-  const carrosFiltrados = carsByBrand?.cars.filter(
-    (car) => modeloSelecionado === null || car.nome_modelo === modeloSelecionado
+  const showAllCars = () => {
+    setSelectedModel(null);
+  };
+
+  const filteredCars = cars?.filter(
+    (car) =>
+      selectedModel === null || car.nome_modelo === selectedModel.toUpperCase()
   );
 
   return (
     <>
+      <S.Div>
+        <S.Paragraph onClick={showAllCars}>Todos os Modelos</S.Paragraph>
+        <S.Paragraph onClick={() => setSelectedModel("ETIOS")}>
+          Etios
+        </S.Paragraph>
+        <S.Paragraph onClick={() => setSelectedModel("COROLLA")}>
+          Corolla
+        </S.Paragraph>
+        <S.Paragraph onClick={() => setSelectedModel("HILLUX SW4")}>
+          Hillux SW4
+        </S.Paragraph>
+      </S.Div>
+      <S.Title>Listagem dos Carros:</S.Title>
       <S.CarContainer>
-        {carrosFiltrados?.map((car) => (
+        {filteredCars?.map((car) => (
           <Carros
             key={car.id}
-            modelo={car.nome_modelo}
-            ano={car.ano}
-            valor={car.valor}
-            marca={car.brand}
-            cor={car.cor}
+            model={car.nome_modelo}
+            year={car.ano}
+            value={car.valor}
+            brand={car.brand}
+            color={car.cor}
           />
         ))}
       </S.CarContainer>
