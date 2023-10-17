@@ -3,7 +3,7 @@ import * as S from "./styles";
 import { MyContext } from "../../context/CarContext";
 import { numberToCoin, coinToNumber } from "../../utils/formatNumber";
 
-const Form = () => {
+const Form = ({ closeModal }) => {
   const [year, setYear] = useState("");
   const [value, setValue] = useState("");
   const [model, setModel] = useState("");
@@ -37,6 +37,7 @@ const Form = () => {
       setColor("");
       setModel("");
       setMessage(null);
+      closeModal();
     } else {
       setMessage("Preencha todos os dados do formulário");
     }

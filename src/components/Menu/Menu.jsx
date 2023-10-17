@@ -29,7 +29,7 @@ const Menu = () => {
       <S.Button onClick={openModal}>Novo Carro</S.Button>
       <Modal isOpen={isModalOpen} closeModal={closeModal}>
         {" "}
-        <Form />
+        <Form closeModal={closeModal} />
       </Modal>
     </S.Div>
   );
