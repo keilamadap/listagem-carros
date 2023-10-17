@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const Div = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 500px;
   flex-direction: column;
   background-color: #e8e8e8;
   padding: 15px;
   border-radius: 5px;
+  margin-bottom: 10px;
+  @media (max-width: 800px) {
+    width: 400px;
+  }
 `;
 
 export const Title = styled.h2`

@@ -5,8 +5,7 @@ export const Div = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 300px;
-
-  /* height: 100%; */
+  height: 100%;
   border: 1px solid #c6c6c6;
   padding: 10px;
   border-radius: 6px;

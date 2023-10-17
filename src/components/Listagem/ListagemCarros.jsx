@@ -1,15 +1,10 @@
 import Carros from "../Carros/Carros";
 import * as S from "./styles";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../context/CarContext";
 
 function ListagemCarros() {
-  const [selectedModel, setSelectedModel] = useState(null);
-  const { cars } = useContext(MyContext);
-
-  const showAllCars = () => {
-    setSelectedModel(null);
-  };
+  const { cars, selectedModel } = useContext(MyContext);
 
   const filteredCars = cars?.filter(
     (car) =>
@@ -17,19 +12,7 @@ function ListagemCarros() {
   );
 
   return (
-    <>
-      <S.Div>
-        <S.Paragraph onClick={showAllCars}>Todos os Modelos</S.Paragraph>
-        <S.Paragraph onClick={() => setSelectedModel("ETIOS")}>
-          Etios
-        </S.Paragraph>
-        <S.Paragraph onClick={() => setSelectedModel("COROLLA")}>
-          Corolla
-        </S.Paragraph>
-        <S.Paragraph onClick={() => setSelectedModel("HILLUX SW4")}>
-          Hillux SW4
-        </S.Paragraph>
-      </S.Div>
+    <S.Container>
       <S.Title>Listagem dos Carros:</S.Title>
       <S.CarContainer>
         {filteredCars?.map((car) => (
@@ -43,7 +26,7 @@ function ListagemCarros() {
           />
         ))}
       </S.CarContainer>
-    </>
+    </S.Container>
   );
 }
 

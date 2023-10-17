@@ -45,9 +45,16 @@ const MyContext = createContext();
 
 function MyContextProvider({ children }) {
   const [cars, setCars] = useState(carsByBrand.data);
+  const [selectedModel, setSelectedModel] = useState(null);
+
+  const showAllCars = () => {
+    setSelectedModel(null);
+  };
 
   return (
-    <MyContext.Provider value={{ cars, setCars }}>
+    <MyContext.Provider
+      value={{ cars, setCars, selectedModel, setSelectedModel, showAllCars }}
+    >
       {children}
     </MyContext.Provider>
   );
