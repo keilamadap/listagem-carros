@@ -23,7 +23,7 @@ const Form = ({ closeModal }) => {
         num_portas: 4,
         combustivel: "flex",
         modelo_id: Math.random(),
-        timestamp_cadastro: "112345LSX",
+        timestamp_cadastro: Math.random(),
         valor: parseFloat(formattedValue),
         nome_modelo: model.toUpperCase(),
         cor: color,

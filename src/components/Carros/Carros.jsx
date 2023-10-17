@@ -13,7 +13,7 @@ const Carros = ({ model, year, brand, value, color }) => {
       </S.Paragraph>
       <S.Paragraph>
         Valor:
-        <S.Info>R${value.toFixed(3).replace(".", ",")}</S.Info>
+        <S.Info>R${value}</S.Info>
       </S.Paragraph>
       <S.Paragraph>
         Nome/Modelo:
