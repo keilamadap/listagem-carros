@@ -8,16 +8,15 @@ const Carros = ({ model, year, brand, value, color }) => {
   return (
     <S.Div>
       <S.Paragraph>
-        Ano de Lançamento:
-        <S.Info>{year}</S.Info>
+        Modelo:
+        <S.Info>{formatText(model)}</S.Info>
+      </S.Paragraph>
+      <S.Paragraph>
+        Ano :<S.Info>{year}</S.Info>
       </S.Paragraph>
       <S.Paragraph>
         Valor:
-        <S.Info>R${value}</S.Info>
-      </S.Paragraph>
-      <S.Paragraph>
-        Nome/Modelo:
-        <S.Info>{formatText(model)}</S.Info>
+        <S.Info>R${value.toFixed(3).replace(".", ",")}</S.Info>
       </S.Paragraph>
       <S.Paragraph>
         Cor:

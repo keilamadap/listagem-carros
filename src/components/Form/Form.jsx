@@ -49,7 +49,7 @@ const Form = ({ closeModal }) => {
       <S.Form onSubmit={handleSubmit}>
         <S.Label>Qual ano de lançamento:</S.Label>
         <S.Input
-          type="number"
+          type="text"
           placeholder="2014"
           value={year}
           onChange={(e) => setYear(e.target.value)}

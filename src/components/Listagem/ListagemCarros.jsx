@@ -13,7 +13,7 @@ function ListagemCarros() {
 
   return (
     <S.Container>
-      <S.Title>Listagem dos Carros:</S.Title>
+      <S.Title>Nossos Carros:</S.Title>
       <S.CarContainer>
         {filteredCars?.map((car) => (
           <Carros
