@@ -27,10 +27,10 @@ const Menu = () => {
         Hillux SW4
       </S.Paragraph>
       <S.Button onClick={openModal}>Novo Carro</S.Button>
-      <Modal isOpen={isModalOpen} closeModal={closeModal}>
+      {/* <Modal isOpen={isModalOpen} closeModal={closeModal}>
         {" "}
         <Form />
-      </Modal>
+      </Modal> */}
     </S.Div>
   );
 };
