@@ -18,13 +18,13 @@ const Menu = () => {
 
   return (
     <S.Div>
-      <S.Paragraph onClick={showAllCars}>Todos os Modelos</S.Paragraph>
+      <S.Paragraph onClick={showAllCars}>Todos </S.Paragraph>
       <S.Paragraph onClick={() => setSelectedModel("ETIOS")}>Etios</S.Paragraph>
       <S.Paragraph onClick={() => setSelectedModel("COROLLA")}>
         Corolla
       </S.Paragraph>
       <S.Paragraph onClick={() => setSelectedModel("HILLUX SW4")}>
-        Hillux SW4
+        Hillux
       </S.Paragraph>
       <S.Button onClick={openModal}>Novo Carro</S.Button>
       <Modal isOpen={isModalOpen} closeModal={closeModal}>
