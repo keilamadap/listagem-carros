@@ -4,10 +4,10 @@ export const Div = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 270px;
-  height: 100px;
+  width: 300px;
+
+  /* height: 100%; */
   border: 1px solid #c6c6c6;
-  margin-top: 2rem;
   padding: 10px;
   border-radius: 6px;
   background-color: #fff;

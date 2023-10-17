@@ -1,24 +1,33 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
-  position: fixed; /* Para fixar a barra de navegação na parte superior */
-  top: 0;
-  left: 0;
-  width: 100%; /* Pegar toda a largura da tela */
+export const CarContainer = styled.div`
   display: flex;
   justify-content: center;
+  overflow-y: auto;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  /* margin-left: 200px; */
+  flex-wrap: wrap;
+  height: 250px;
+  padding: 20px;
+`;
+
+export const Div = styled.div`
+  width: 200px;
+  left: 0;
+  top: 0;
+  position: fixed;
   gap: 2rem;
   background-color: #fff;
-  z-index: 1; Para garantir que fique em cima de tudo
   padding: 10px;
-  height: 50px;
-  align-items: center;
+  height: 100%;
   box-shadow: 2px 2px 5px 0px rgba(194, 194, 194, 1);
 `;
 
 export const Paragraph = styled.p`
   box-shadow: inset 0 0 0 0 #54b3d6;
-  width: 100; /* Corrigido para width: 100%; */
+  width: 100%;
   color: #282822;
   padding: 5px;
   margin: 0 -0.25rem;
@@ -32,4 +41,10 @@ export const Paragraph = styled.p`
     color: #fff;
     box-shadow: inset 200px 0 0 0 #54b3d6;
   }
+`;
+
+export const Title = styled.h2`
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 `;
