@@ -18,6 +18,7 @@ export const Title = styled.h2`
   display: flex;
   justify-content: center;
   padding-top: 10px;
+  margin-bottom: 2rem;
 `;
 
 export const Form = styled.form`
@@ -34,6 +35,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   padding: 5px;
+  outline: none;
 `;
 
 export const ButtonContainer = styled.div`
@@ -45,15 +47,17 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 5px;
   background-color: #ffb300;
   border: none;
+  height: 30px;
   color: #fff;
   border-radius: 6px;
   width: 200px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
     background-color: #b27d00;

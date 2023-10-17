@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Div = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  width: 300px;
-  height: 100%;
+  min-width: 170px;
+  height: 150px;
+  gap: 5px;
   border: 1px solid #c6c6c6;
   padding: 10px;
   border-radius: 6px;
@@ -15,9 +16,12 @@ export const Div = styled.div`
   box-shadow: 2px 2px 5px 0px rgba(194, 194, 194, 1);
 `;
 
-export const Paragraph = styled.p``;
+export const Paragraph = styled.p`
+  text-align: start;
+  color: #bd8500;
+`;
 
 export const Info = styled.span`
-  font-weight: 600;
   padding-left: 5px;
+  font-weight: 600;
 `;

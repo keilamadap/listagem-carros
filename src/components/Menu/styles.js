@@ -29,7 +29,7 @@ export const Paragraph = styled.p`
 
   &:hover {
     padding: 5px;
-    color: #54b3d6;
+    color: #f0aa00;
   }
   @media (max-width: 500px) {
     font-size: 12px;
@@ -44,7 +44,8 @@ export const Button = styled.button`
   cursor: pointer;
   padding: 10px;
   border: none;
-
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   &:hover {
     background-color: #f0aa00;
   }

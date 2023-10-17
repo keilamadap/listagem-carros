@@ -11,16 +11,16 @@
 }
 
 .modal {
+  background: #e8e8e8;
   padding: 20px;
   border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .close-container {
   display: flex;
   justify-content: end;
   width: 100%;
-  margin-bottom: 4px;
 }
 
 .close-button {
@@ -31,7 +31,8 @@
   cursor: pointer;
   padding: 10px;
   border: none;
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   &:hover {
     background-color: #b27d00;
   }
