@@ -10,10 +10,13 @@ export const Div = styled.div`
   background-color: #fff;
   padding: 10px;
   box-shadow: 2px 2px 5px 0px rgba(194, 194, 194, 1);
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 500px) {
+    gap: 0;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -28,6 +31,10 @@ export const Paragraph = styled.p`
     padding: 5px;
     color: #54b3d6;
   }
+  @media (max-width: 500px) {
+    font-size: 12px;
+    width: 50px;
+  }
 `;
 
 export const Button = styled.button`
@@ -40,5 +47,10 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #f0aa00;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+    width: 100px;
   }
 `;
