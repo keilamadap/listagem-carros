@@ -52,7 +52,10 @@ const Form = ({ closeModal }) => {
           type="text"
           placeholder="2014"
           value={year}
-          onChange={(e) => setYear(e.target.value)}
+          onChange={(e) => {
+            const inputValue = e.target.value.replace(/\D/g, "").slice(0, 4);
+            setYear(inputValue);
+          }}
         />
         <S.Label>Valor de Mercado:</S.Label>
         <S.Input
