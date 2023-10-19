@@ -63,3 +63,9 @@ export const Button = styled.button`
     background-color: #b27d00;
   }
 `;
+
+export const Select = styled.select`
+  height: 25px;
+`;
+
+export const Option = styled.option``;

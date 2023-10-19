@@ -47,14 +47,14 @@ const Form = ({ closeModal }) => {
     <S.Div>
       <S.Title>Adicionar novo carro:</S.Title>
       <S.Form onSubmit={handleSubmit}>
-        <S.Label>Qual ano de lançamento:</S.Label>
+        <S.Label>Ano de lançamento:</S.Label>
         <S.Input
           type="text"
           placeholder="2014"
           value={year}
           onChange={(e) => setYear(e.target.value)}
         />
-        <S.Label>Valor atual:</S.Label>
+        <S.Label>Valor de Mercado:</S.Label>
         <S.Input
           type="text"
           placeholder="R$50.000"
@@ -64,14 +64,13 @@ const Form = ({ closeModal }) => {
             setValue(formattedValue);
           }}
         />
-        <S.Label>Informe o nome/modelo:</S.Label>
-        <S.Input
-          type="text"
-          placeholder="Corolla"
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-        />
-        <S.Label>Cor do carro:</S.Label>
+        <S.Label>Selecione o modelo:</S.Label>
+        <S.Select value={model} onChange={(e) => setModel(e.target.value)}>
+          <S.Option value="Corolla">Corolla</S.Option>
+          <S.Option value="Etios">Etios</S.Option>
+          <S.Option value="Hillux Sw4">Hillux</S.Option>
+        </S.Select>
+        <S.Label>Cor:</S.Label>
         <S.Input
           type="text"
           placeholder="Amarelo"
