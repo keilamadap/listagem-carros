@@ -8,7 +8,7 @@
  */
 import { useContext, useState } from "react";
 import * as S from "./styles";
-import { MyContext } from "../../context/CarContext";
+import { CarsContext } from "../../context/CarContext";
 import { numberToCoin, coinToNumber } from "../../utils/formatNumber";
 
 const Form = ({ closeModal }) => {
@@ -46,7 +46,7 @@ const Form = ({ closeModal }) => {
    * Accesses the car context for managing car data.
    * @type {object}
    */
-  const { cars, setCars } = useContext(MyContext);
+  const { cars, setCars } = useContext(CarsContext);
 
   /**
    * Handles the form submission to add a new car.

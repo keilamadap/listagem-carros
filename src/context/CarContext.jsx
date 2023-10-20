@@ -41,9 +41,9 @@ const carsByBrand = {
   ],
 };
 
-const MyContext = createContext();
+const CarsContext = createContext();
 
-function MyContextProvider({ children }) {
+function CarsContextProvider({ children }) {
   const [cars, setCars] = useState(carsByBrand.data);
   const [selectedModel, setSelectedModel] = useState(null);
 
@@ -52,12 +52,12 @@ function MyContextProvider({ children }) {
   };
 
   return (
-    <MyContext.Provider
+    <CarsContext.Provider
       value={{ cars, setCars, selectedModel, setSelectedModel, showAllCars }}
     >
       {children}
-    </MyContext.Provider>
+    </CarsContext.Provider>
   );
 }
 
-export { MyContext, MyContextProvider };
+export { CarsContext, CarsContextProvider };

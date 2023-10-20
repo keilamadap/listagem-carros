@@ -6,7 +6,7 @@
  */
 import * as S from "./styles";
 import { useContext, useState } from "react";
-import { MyContext } from "../../context/CarContext";
+import { CarsContext } from "../../context/CarContext";
 import Modal from "./Modal/Modal";
 import Form from "../Form/Form";
 
@@ -16,7 +16,7 @@ const Menu = () => {
    *
    * @type {object}
    */
-  const { setSelectedModel, showAllCars } = useContext(MyContext);
+  const { setSelectedModel, showAllCars } = useContext(CarsContext);
 
   /**
    * State to manage the visibility of the modal.

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import ListagemCarros from "./components/List/ListagemCarros";
-import { MyContextProvider } from "./context/CarContext";
+import { CarsContextProvider } from "./context/CarContext";
 import Menu from "./components/Menu/Menu";
 
 /**
@@ -10,10 +10,10 @@ import Menu from "./components/Menu/Menu";
  */
 function App() {
   return (
-    <MyContextProvider>
+    <CarsContextProvider>
       <Menu />
       <ListagemCarros />
-    </MyContextProvider>
+    </CarsContextProvider>
   );
 }
 

@@ -6,7 +6,7 @@
 import Carros from "../Cars/Carros";
 import * as S from "./styles";
 import { useContext } from "react";
-import { MyContext } from "../../context/CarContext";
+import { CarsContext } from "../../context/CarContext";
 
 /**
  * ListagemCarros component displays a list of cars filtered by a selected car model.
@@ -14,7 +14,7 @@ import { MyContext } from "../../context/CarContext";
  * @returns {JSX.Element} A React component to display the list of cars.
  */
 function ListagemCarros() {
-  const { cars, selectedModel } = useContext(MyContext);
+  const { cars, selectedModel } = useContext(CarsContext);
 
   /**
    * Filters the cars based on the selected car model.
