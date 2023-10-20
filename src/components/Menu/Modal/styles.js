@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 20px;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
