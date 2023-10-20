@@ -1,3 +1,9 @@
+/**
+ * React component for the menu and car selection.
+ *
+ * @component
+ * @returns {JSX.Element} A React component for menu and car selection.
+ */
 import * as S from "./styles";
 import { useContext, useState } from "react";
 import { MyContext } from "../../context/CarContext";
@@ -5,13 +11,30 @@ import Modal from "./Modal/Modal";
 import Form from "../Form/Form";
 
 const Menu = () => {
+  /**
+   * Accesses the car context to set the selected car model and show all cars.
+   *
+   * @type {object}
+   */
   const { setSelectedModel, showAllCars } = useContext(MyContext);
+
+  /**
+   * State to manage the visibility of the modal.
+   *
+   * @type {boolean}
+   */
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  /**
+   * Opens the modal for adding a new car.
+   */
   const openModal = () => {
     setIsModalOpen(true);
   };
 
+  /**
+   * Closes the modal.
+   */
   const closeModal = () => {
     setIsModalOpen(false);
   };

@@ -1,4 +1,6 @@
-.modal-overlay {
+import styled from 'styled-components';
+
+export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -8,22 +10,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+`;
 
-.modal {
+export const ModalContent = styled.div`
   background: #e8e8e8;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+`;
 
-.close-container {
+export const CloseContainer = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100%;
-}
+`;
 
-.close-button {
+export const CloseButton = styled.button`
   width: 100px;
   background-color: #ffb300;
   border-radius: 6px;
@@ -36,4 +38,4 @@
   &:hover {
     background-color: #b27d00;
   }
-}
+`;

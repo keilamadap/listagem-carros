@@ -1,16 +1,58 @@
+/**
+ * React component for adding a new car to the list.
+ *
+ * @component
+ * @param {object} props - The component's props.
+ * @param {function} props.closeModal - A function to close the modal.
+ * @returns {JSX.Element} A React component for adding a new car.
+ */
 import { useContext, useState } from "react";
 import * as S from "./styles";
 import { MyContext } from "../../context/CarContext";
 import { numberToCoin, coinToNumber } from "../../utils/formatNumber";
 
 const Form = ({ closeModal }) => {
+  /**
+   * State for the car's year.
+   * @type {string}
+   */
   const [year, setYear] = useState("");
+
+  /**
+   * State for the car's value.
+   * @type {string}
+   */
   const [value, setValue] = useState("");
+
+  /**
+   * State for the car's model.
+   * @type {string}
+   */
   const [model, setModel] = useState("");
+
+  /**
+   * State for the car's color.
+   * @type {string}
+   */
   const [color, setColor] = useState("");
+
+  /**
+   * State for displaying a validation message.
+   * @type {string|null}
+   */
   const [message, setMessage] = useState("");
+
+  /**
+   * Accesses the car context for managing car data.
+   * @type {object}
+   */
   const { cars, setCars } = useContext(MyContext);
 
+  /**
+   * Handles the form submission to add a new car.
+   *
+   * @param {Event} e - The form submission event.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
 
